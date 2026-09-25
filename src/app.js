@@ -8,6 +8,7 @@ import expenseRoutes from './routes/expenseRoutes.js';
 import goalRoutes from './routes/goalRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import budgetRoutes from './routes/budgetRoutes.js';
+import stocksRoutes from './routes/stocksRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 const app = express();
@@ -30,6 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/goals', goalRoutes);
 app.use('/api/budget', budgetRoutes);
+app.use('/api/stocks', stocksRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
